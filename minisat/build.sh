@@ -9,7 +9,8 @@ cd build
 
 if [ ! -d "minisat" ]; then
     echo "Cloning from git"
-    git clone https://github.com/niklasso/minisat.git
+    #git clone https://github.com/niklasso/minisat.git
+    git clone https://github.com/agurfinkel/minisat.git
 
     echo "Patching minisat to build and work with emscripten"
     for p in ../patches/*.patch; do patch -p0 < $p; done
